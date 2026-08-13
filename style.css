@@ -1,0 +1,603 @@
+/* =========================================
+   GENERAL DESIGN
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #7c3aed, transparent 35%),
+        radial-gradient(circle at bottom right, #2563eb, transparent 35%),
+        linear-gradient(135deg, #111827, #312e81);
+
+    color: #e5e7eb;
+}
+
+
+/* =========================================
+   REGISTRATION PAGE
+========================================= */
+
+.registration-container {
+    width: 850px;
+    max-width: 95%;
+    margin: 0 auto;
+
+    background: rgba(17, 24, 39, 0.94);
+
+    padding: 30px 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================
+   REGISTRATION HEADER
+========================================= */
+
+.registration-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.registration-header h1 {
+    color: #a5b4fc;
+    font-size: 32px;
+    margin: 0 0 6px;
+    letter-spacing: 1px;
+}
+
+.registration-header p {
+    color: #cbd5e1;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #475569;
+
+    border-radius: 8px;
+
+    background: #1e293b;
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* Input Hover */
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #6366f1;
+}
+
+
+/* Input Focus */
+
+.form-group input:focus,
+.form-group select:focus {
+    background: #263449;
+
+    border-color: #818cf8;
+
+    box-shadow:
+        0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+
+/* Select Options */
+
+.form-group select {
+    color: white;
+}
+
+.form-group select option {
+    background: #1e293b;
+    color: white;
+}
+
+
+/* Full Width Field */
+
+.full-width {
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.form-buttons input {
+    width: 150px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+/* Register Button */
+
+.form-buttons input[type="submit"] {
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #4f46e5
+    );
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+
+/* Clear Button */
+
+.form-buttons input[type="reset"] {
+    background: linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+    color: white;
+
+    box-shadow:
+        0 5px 15px rgba(239, 68, 68, 0.25);
+}
+
+
+/* Button Hover */
+
+.form-buttons input:hover {
+    transform: translateY(-2px);
+}
+
+.form-buttons input[type="submit"]:hover {
+    box-shadow:
+        0 8px 20px rgba(79, 70, 229, 0.45);
+}
+
+.form-buttons input[type="reset"]:hover {
+    box-shadow:
+        0 8px 20px rgba(239, 68, 68, 0.4);
+}
+
+
+/* =========================================
+   WELCOME PAGE
+========================================= */
+
+.welcome-container {
+    width: 750px;
+
+    max-width: 95%;
+
+    margin: 30px auto;
+
+    text-align: center;
+}
+
+
+.welcome-container h1 {
+    color: #a5b4fc;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   WELCOME MESSAGE
+========================================= */
+
+.welcome-message {
+    display: inline-block;
+
+    background: rgba(17, 24, 39, 0.94);
+
+    color: #a5b4fc;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   INFORMATION TABLE
+========================================= */
+
+.info-table {
+    width: 100%;
+
+    background: #111827;
+
+    border-collapse: collapse;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.4);
+
+    margin: auto;
+}
+
+
+.info-table td {
+    padding: 13px 16px;
+
+    border-bottom: 1px solid #374151;
+
+    text-align: left;
+
+    font-weight: normal;
+
+    color: #e5e7eb;
+}
+
+
+/* First Column */
+
+.info-table td:first-child {
+    width: 40%;
+
+    font-weight: bold;
+
+    color: #a5b4fc;
+
+    background: #1e293b;
+}
+
+
+/* Table Hover */
+
+.info-table tr:hover td {
+    background: #263449;
+}
+
+
+/* =========================================
+   LOGOUT BUTTON
+========================================= */
+
+.logout-container {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+
+.logout-button {
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 35px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 8px 20px rgba(220, 38, 38, 0.3);
+
+    transition: 0.25s;
+}
+
+
+.logout-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(220, 38, 38, 0.4);
+}
+
+
+/* =========================================
+   LOGOUT PAGE
+========================================= */
+
+.logout-page {
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.logout-box {
+    width: 500px;
+
+    max-width: 95%;
+
+    background: rgba(17, 24, 39, 0.94);
+
+    padding: 45px 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+
+/* Logout Title */
+
+.logout-box h1 {
+    color: #a5b4fc;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+
+/* Logout Message */
+
+.logout-message {
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #e2e8f0;
+
+    margin-bottom: 10px;
+}
+
+
+/* Logged User */
+
+.logged-user {
+    color: #94a3b8;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   LOGIN AGAIN BUTTON
+========================================= */
+
+.login-again {
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #4f46e5
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 32px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(79, 70, 229, 0.3);
+
+    transition: 0.25s;
+}
+
+
+.login-again:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(79, 70, 229, 0.4);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+
+    /* Registration */
+
+    .registration-container {
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+
+
+    .registration-header h1 {
+        font-size: 28px;
+    }
+
+
+    /* One Column */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+
+    /* Buttons */
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+
+    .form-buttons input {
+        width: 100%;
+    }
+
+
+    /* Welcome */
+
+    .welcome-container {
+        width: 100%;
+    }
+
+
+    .welcome-container h1 {
+        font-size: 32px;
+    }
+
+
+    /* Information Table */
+
+    .info-table {
+        font-size: 13px;
+    }
+
+
+    .info-table td {
+        padding: 10px;
+    }
+
+
+    /* Logout */
+
+    .logout-box {
+        padding: 35px 20px;
+    }
+
+
+    .logout-box h1 {
+        font-size: 30px;
+    }
+}
