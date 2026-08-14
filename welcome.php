@@ -6,26 +6,26 @@
 
 <?php
 
- $email=$_POST['txtemail'];
- $pass=$_POST['txtpass'];
- $date=$_POST['txtdate'];
- $gender=$_POST['gender'];
- $firstname=$_POST['txtfirstname'];
- $middlename=$_POST['txtmiddlename'];
- $lastname=$_POST['txtlastname'];
- $age=$_POST['txtage'];
- $address=$_POST['txtaddress'];
- $city=$_POST['txtcity'];
- $province=$_POST['txtprovince'];
- $zipcode=$_POST['txtzipcode'];
- $contact=$_POST['txtcontact'];
- $nationality=$_POST['txtnationality'];
- $civilstatus=$_POST['civilstatus'];
- $course=$_POST['txtcourse'];
- $yearlevel=$_POST['yearlevel'];
- $studentid=$_POST['txtstudentid'];
- $school=$_POST['txtschool'];
- $guardian=$_POST['txtguardian'];
+ $email = $_POST['txtemail'] ?? '';
+ $pass=$_POST['txtpass'] ?? '';
+ $date=$_POST['txtdate'] ?? '';
+ $gender=$_POST['gender'] ?? '';
+ $firstname=$_POST['txtfirstname'] ?? '';
+ $middlename=$_POST['txtmiddlename'] ?? '';
+ $lastname=$_POST['txtlastname'] ?? '';
+ $age=$_POST['txtage'] ?? '';
+ $address=$_POST['txtaddress'] ?? '';
+ $city=$_POST['txtcity'] ?? '';
+ $province=$_POST['txtprovince'] ?? '';
+ $zipcode=$_POST['txtzipcode'] ?? '';
+ $contact=$_POST['txtcontact'] ?? '';
+ $nationality=$_POST['txtnationality'] ?? '';
+ $civilstatus=$_POST['civilstatus'] ?? '';
+ $course=$_POST['txtcourse'] ?? '';
+ $yearlevel=$_POST['yearlevel'] ?? '';
+ $studentid=$_POST['txtstudentid'] ?? '';
+ $school=$_POST['txtschool'] ?? '';
+ $guardian=$_POST['txtguardian'] ?? '';
 
  print "<div class='welcome-message'>Welcome $email</div>";
 
