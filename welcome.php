@@ -1,84 +1,162 @@
-<link rel="stylesheet" href="style.css">
+<?php
+
+// Prevent direct access to welcome.php
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header("Location: login.php");
+    exit();
+}
+
+$email = $_POST['txtemail'] ?? '';
+$pass = $_POST['txtpass'] ?? '';
+$date = $_POST['txtdate'] ?? '';
+$gender = $_POST['gender'] ?? '';
+$firstname = $_POST['txtfirstname'] ?? '';
+$middlename = $_POST['txtmiddlename'] ?? '';
+$lastname = $_POST['txtlastname'] ?? '';
+$age = $_POST['txtage'] ?? '';
+$address = $_POST['txtaddress'] ?? '';
+$city = $_POST['txtcity'] ?? '';
+$province = $_POST['txtprovince'] ?? '';
+$zipcode = $_POST['txtzipcode'] ?? '';
+$contact = $_POST['txtcontact'] ?? '';
+$nationality = $_POST['txtnationality'] ?? '';
+$civilstatus = $_POST['civilstatus'] ?? '';
+$course = $_POST['txtcourse'] ?? '';
+$yearlevel = $_POST['yearlevel'] ?? '';
+$studentid = $_POST['txtstudentid'] ?? '';
+$school = $_POST['txtschool'] ?? '';
+$guardian = $_POST['txtguardian'] ?? '';
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
 
 <div class="welcome-container">
 
     <h1>Welcome!</h1>
 
-<?php
+    <div class="welcome-message">
+        Welcome <?php echo htmlspecialchars($email); ?>
+    </div>
 
- $email = $_POST['txtemail'] ?? '';
- $pass=$_POST['txtpass'] ?? '';
- $date=$_POST['txtdate'] ?? '';
- $gender=$_POST['gender'] ?? '';
- $firstname=$_POST['txtfirstname'] ?? '';
- $middlename=$_POST['txtmiddlename'] ?? '';
- $lastname=$_POST['txtlastname'] ?? '';
- $age=$_POST['txtage'] ?? '';
- $address=$_POST['txtaddress'] ?? '';
- $city=$_POST['txtcity'] ?? '';
- $province=$_POST['txtprovince'] ?? '';
- $zipcode=$_POST['txtzipcode'] ?? '';
- $contact=$_POST['txtcontact'] ?? '';
- $nationality=$_POST['txtnationality'] ?? '';
- $civilstatus=$_POST['civilstatus'] ?? '';
- $course=$_POST['txtcourse'] ?? '';
- $yearlevel=$_POST['yearlevel'] ?? '';
- $studentid=$_POST['txtstudentid'] ?? '';
- $school=$_POST['txtschool'] ?? '';
- $guardian=$_POST['txtguardian'] ?? '';
+    <table class="info-table">
 
- print "<div class='welcome-message'>Welcome $email</div>";
+        <tr>
+            <td>Email</td>
+            <td><?php echo htmlspecialchars($email); ?></td>
+        </tr>
 
- print "<table class='info-table'>
+        <tr>
+            <td>Password</td>
+            <td><?php echo htmlspecialchars($pass); ?></td>
+        </tr>
 
-     <Tr><td>Email<td>$email
+        <tr>
+            <td>Birthday</td>
+            <td><?php echo htmlspecialchars($date); ?></td>
+        </tr>
 
-     <Tr><td>Password<td>$pass
+        <tr>
+            <td>Gender</td>
+            <td><?php echo htmlspecialchars($gender); ?></td>
+        </tr>
 
-     <Tr><td>Birthday<td>$date
+        <tr>
+            <td>First Name</td>
+            <td><?php echo htmlspecialchars($firstname); ?></td>
+        </tr>
 
-     <Tr><td>Gender<td>$gender
+        <tr>
+            <td>Middle Name</td>
+            <td><?php echo htmlspecialchars($middlename); ?></td>
+        </tr>
 
-     <Tr><td>First Name<td>$firstname
+        <tr>
+            <td>Last Name</td>
+            <td><?php echo htmlspecialchars($lastname); ?></td>
+        </tr>
 
-     <Tr><td>Middle Name<td>$middlename
+        <tr>
+            <td>Age</td>
+            <td><?php echo htmlspecialchars($age); ?></td>
+        </tr>
 
-     <Tr><td>Last Name<td>$lastname
+        <tr>
+            <td>Address</td>
+            <td><?php echo htmlspecialchars($address); ?></td>
+        </tr>
 
-     <Tr><td>Age<td>$age
+        <tr>
+            <td>City</td>
+            <td><?php echo htmlspecialchars($city); ?></td>
+        </tr>
 
-     <Tr><td>Address<td>$address
+        <tr>
+            <td>Province</td>
+            <td><?php echo htmlspecialchars($province); ?></td>
+        </tr>
 
-     <Tr><td>City<td>$city
+        <tr>
+            <td>Zip Code</td>
+            <td><?php echo htmlspecialchars($zipcode); ?></td>
+        </tr>
 
-     <Tr><td>Province<td>$province
+        <tr>
+            <td>Contact Number</td>
+            <td><?php echo htmlspecialchars($contact); ?></td>
+        </tr>
 
-     <Tr><td>Zip Code<td>$zipcode
+        <tr>
+            <td>Nationality</td>
+            <td><?php echo htmlspecialchars($nationality); ?></td>
+        </tr>
 
-     <Tr><td>Contact Number<td>$contact
+        <tr>
+            <td>Civil Status</td>
+            <td><?php echo htmlspecialchars($civilstatus); ?></td>
+        </tr>
 
-     <Tr><td>Nationality<td>$nationality
+        <tr>
+            <td>Course</td>
+            <td><?php echo htmlspecialchars($course); ?></td>
+        </tr>
 
-     <Tr><td>Civil Status<td>$civilstatus
+        <tr>
+            <td>Year Level</td>
+            <td><?php echo htmlspecialchars($yearlevel); ?></td>
+        </tr>
 
-     <Tr><td>Course<td>$course
+        <tr>
+            <td>Student ID</td>
+            <td><?php echo htmlspecialchars($studentid); ?></td>
+        </tr>
 
-     <Tr><td>Year Level<td>$yearlevel
+        <tr>
+            <td>School</td>
+            <td><?php echo htmlspecialchars($school); ?></td>
+        </tr>
 
-     <Tr><td>Student ID<td>$studentid
+        <tr>
+            <td>Guardian Name</td>
+            <td><?php echo htmlspecialchars($guardian); ?></td>
+        </tr>
 
-     <Tr><td>School<td>$school
+    </table>
 
-     <Tr><td>Guardian Name<td>$guardian";
-
- print "</table>";
-
- print "<div class='logout-container'>
-
-     <a class='logout-button' href='logout.php?email=$email'>Logout</a>
-
-     </div>";
-
-?>
+    <div class="logout-container">
+        <a class="logout-button" href="logout.php?email=<?php echo urlencode($email); ?>">
+            Logout
+        </a>
+    </div>
 
 </div>
+
+</body>
+</html>
